@@ -1,5 +1,16 @@
+import { useState } from 'react';
+
+import Questions from './Questions.jsx';
+import data from './data.js';
+
 function App() {
-	return <h1>Questions</h1>;
+	const [questions, setQuestions] = useState(data);
+
+	return (
+		<main>
+			<Questions questions={questions} />
+		</main>
+	);
 }
 
 export default App;
